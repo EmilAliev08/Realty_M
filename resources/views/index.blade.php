@@ -9,6 +9,6 @@
     <x-sections.about/>
     <x-sections.process/>
     <x-sections.faq/>
-    <x-sections.reviews/>
-    
+    <x-sections.reviews :reviews="$reviews"/>
+
 @endsection

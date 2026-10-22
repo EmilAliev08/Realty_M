@@ -15,31 +15,29 @@
         </div>
 
         <!-- Основной блок: фото + информация -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center mb-20">
             
-            <!-- Левая часть: Фото -->
-            <div class="relative">
+            <div class="relative max-w-lg mx-auto lg:mx-0 lg:justify-self-end lg:mr-12">
                 <!-- Декоративный фон за фото -->
                 <div class="absolute -top-4 -left-4 w-full h-full rounded-2xl opacity-20"
-                     style="background: linear-gradient(135deg, #3B7EFF 0%, #00A3E0 100%);"></div>
+                    style="background: linear-gradient(135deg, #3B7EFF 0%, #00A3E0 100%);"></div>
                 
-                <!-- Фото  -->
-            <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
-                <img src="{{ asset('images/marat.jpg') }}" 
-                    alt="Марат - риелтор" 
-                    class="w-full h-full object-cover object-[center_30%]">
-            </div>
-
+                <!-- Фото -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
+                    <img src="{{ asset('images/marat.jpg') }}" 
+                        alt="Марат - риелтор" 
+                        class="w-full h-full object-cover object-[center_30%]">
+                </div>
             </div>
 
             <!-- Правая часть: Информация -->
-            <div>
+            <div class="lg:pl-8 lg:pr-12">
                 <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                     Марат — ваш надежный партнер в мире недвижимости
                 </h3>
                 
                 <div class="space-y-4 text-lg text-gray-800 leading-relaxed">
-                   <p>
+                    <p>
                         Здравствуйте! Я занимаюсь сопровождением сделок с недвижимостью. 
                         Моя работа — это не просто поиск квартиры или покупателя, а полное 
                         решение ваших жилищных вопросов с минимальным стрессом для вас.
@@ -57,7 +55,7 @@
                 </div>
 
                 <!-- Ключевые факты -->
-               <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="flex items-start space-x-3">
                         <div class="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center"
                              style="background: linear-gradient(135deg, #4A55D3 0%, #161B5E 100%);">

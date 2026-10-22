@@ -2,7 +2,7 @@
     <nav class="container mx-auto px-4 py-4">
         <div class="flex justify-between items-center">
             <!-- Логотип / Название сайта -->
-            <a href="#" class="text-2xl font-bold tracking-tight" style="color: #161B5E;">
+            <a href="{{ route('home') }}" class="text-2xl font-bold tracking-tight" style="color: #161B5E;">
                 Realty_M
             </a>
             
