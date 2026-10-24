@@ -10,5 +10,6 @@
     <x-sections.process/>
     <x-sections.faq/>
     <x-sections.reviews :reviews="$reviews"/>
+    <x-sections.contacts/>
 
 @endsection
