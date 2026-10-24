@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Realty_M')</title>
+    <meta name="description" content="Риелтор Марат — помощь в покупке и продаже недвижимости">
+    <title>Realty_M — Риелтор Марат</title>
+    
+    <!-- Tailwind CSS и JS через Vite -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-
-<body class="flex flex-col min-h-screen bg-gray-50">
+<body class="bg-gray-50 font-sans antialiased">
     
+    <!-- Шапка сайта -->
     <x-header/>
     
-    <main class="flex-grow">
-        @yield('content') 
+    <!-- Основной контент -->
+    <main>
+        @yield('content')
     </main>
     
+    <!-- Подвал сайта -->
     <x-footer/>
     
 </body>

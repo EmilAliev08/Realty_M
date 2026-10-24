@@ -11,4 +11,9 @@ class Review extends Model
         'rating',
         'review_text',
     ];
+
+    public function users(): HasMany
+    {
+        return $this->belongsTo(Post::class);
+    }
 }
