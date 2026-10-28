@@ -13,9 +13,9 @@ Route::post('/reviews', [ReviewController::class, 'store'])
     ->middleware('auth')
     ->name('reviews.store');
 
-// Dashboard (Breeze)
+// Dashboard 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect()->route('home');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Профиль (Breeze)

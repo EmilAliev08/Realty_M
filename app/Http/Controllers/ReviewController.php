@@ -12,14 +12,19 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
+        // Валидация
         $validated = $request->validate([
-            'client_name' => 'required|string|max:255',
             'rating' => 'required|integer|min:1|max:5',
-            'review_text' => 'required|string|max:1000',
+            'review_text' => 'required|string|min:10|max:1000',
         ]);
 
-        Review::create($validated);
+        // Создаём отзыв, привязанный к текущему пользователю
+        Review::create([
+            'user_id' => auth()->id(),
+            'rating' => $validated['rating'],
+            'review_text' => $validated['review_text'],
+        ]);
 
-        return back()->with('success', 'Спасибо! Ваш отзыв опубликован.');
+        return response()->json(['message' => 'Отзыв добавлен'], 200);
     }
 }

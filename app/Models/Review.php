@@ -3,17 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Review extends Model
 {
     protected $fillable = [
-        'client_name',
+        'user_id',
         'rating',
         'review_text',
     ];
 
-    public function users(): HasMany
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Post::class);
+        return $this->belongsTo(User::class);
     }
 }

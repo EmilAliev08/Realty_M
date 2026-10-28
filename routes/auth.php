@@ -11,23 +11,28 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
+//Роуты для гостей
 Route::middleware('guest')->group(function () {
+    //Получить форму регистрации и добавить пользователя 
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
 
     Route::post('register', [RegisteredUserController::class, 'store']);
 
+    //Получить форму регистрации и залогинить пользователя
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
         ->name('login');
 
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
+    //Получить форму сброса пароля и отправить ссылку для сброса пароля
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
         ->name('password.request');
 
     Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])
         ->name('password.email');
 
+    //Получить форму для создания нового пароля и сохранение нового пароля
     Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])
         ->name('password.reset');
 
@@ -35,7 +40,9 @@ Route::middleware('guest')->group(function () {
         ->name('password.store');
 });
 
+//Роуты для авторизованных пользователей
 Route::middleware('auth')->group(function () {
+    
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
 

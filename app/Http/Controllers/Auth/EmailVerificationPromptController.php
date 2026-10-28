@@ -9,8 +9,12 @@ use Illuminate\View\View;
 
 class EmailVerificationPromptController extends Controller
 {
+    
     /**
-     * Display the email verification prompt.
+     * Экран подтверждения email.
+     * 
+     * Если email уже подтверждён — редиректит на dashboard (или куда пользователь хотел попасть).
+     * Если не подтверждён — показывает страницу с просьбой подтвердить.
      */
     public function __invoke(Request $request): RedirectResponse|View
     {
@@ -19,3 +23,4 @@ class EmailVerificationPromptController extends Controller
                     : view('auth.verify-email');
     }
 }
+    
