@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 // Главная страница
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -27,3 +28,6 @@ Route::middleware('auth')->group(function () {
 
 // Роуты аутентификации (Breeze)
 require __DIR__.'/auth.php';
+
+// Контакты (форма обратной связи)
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

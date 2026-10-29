@@ -130,8 +130,8 @@
                         Оставить заявку
                     </h3>
 
-                    <form action="#" method="POST" class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm" data-contact-form>
-                        {{-- В будущем здесь будет @csrf --}}
+                    <form action="{{ route('contact.store') }}" method="POST" class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+                        @csrf
 
                         <!-- Имя -->
                         <div class="mb-5">

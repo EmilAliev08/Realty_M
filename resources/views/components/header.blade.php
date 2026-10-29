@@ -8,13 +8,13 @@
             
             <!-- Меню для десктопа -->
             <ul class="hidden lg:flex space-x-8 text-sm font-medium">
-                <li><a href="#hero" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Главная</a></li>
-                <li><a href="#advantages" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Преимущества</a></li>
-                <li><a href="#services" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Услуги</a></li>
-                <li><a href="#about" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Обо мне</a></li>
-                <li><a href="#process" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Как проходит работа</a></li>
-                <li><a href="#contacts" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Контакты</a></li>
-                <li><a href="#reviews" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Отзывы</a></li>
+                <li><a href="/#hero" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Главная</a></li>
+                <li><a href="/#advantages" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Преимущества</a></li>
+                <li><a href="/#services" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Услуги</a></li>
+                <li><a href="/#about" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Обо мне</a></li>
+                <li><a href="/#process" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Как проходит работа</a></li>
+                <li><a href="/#contacts" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Контакты</a></li>
+                <li><a href="/#reviews" class="text-gray-700 hover:text-[#3B7EFF] transition-colors duration-300">Отзывы</a></li>
             </ul>
             
             <!-- Кнопки авторизации для десктопа -->
