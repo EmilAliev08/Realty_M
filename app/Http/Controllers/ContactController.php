@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\ContactRequest;
 use Illuminate\Http\Request;
+use App\Mail\ContactFormMail;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -28,6 +30,9 @@ class ContactController extends Controller
             'message' => $validated['message'],
             'agreed_to_processing' => true,
         ]);
+
+        // 3. ОТПРАВЛЯЕМ ПИСЬМО МАРАТУ
+        Mail::to('emilalievm0807@outlook.com')->send(new ContactFormMail($validated));
 
         // 3. Возвращаем пользователя назад с зелёным сообщением
         return back()->with('success', 'Заявка отправлена! Мы свяжемся с вами в ближайшее время.');

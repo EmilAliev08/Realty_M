@@ -53,7 +53,7 @@
                                 </svg>
                             </div>
                             <div class="flex-grow">
-                                <div class="text-sm text-gray-500 mb-1">Email</div>
+                                <div class="text-sm text-gray-500 mb-1">Email</div> 
                                 <div class="text-lg font-semibold text-gray-900 group-hover:text-[#3B7EFF] transition-colors">
                                     marat.abdulmyagnov@bk.ru
                                 </div>
@@ -64,7 +64,7 @@
                         </a>
 
                         <!-- Telegram -->
-                        <a href="#" class="group flex items-center p-5 bg-white rounded-2xl border border-gray-100 hover:border-[#3B7EFF]/40 hover:shadow-lg transition-all duration-300">
+                       <a href="https://t.me/Maratabdulmianov" target="_blank" rel="noopener noreferrer" class="group flex items-center p-5 bg-white rounded-2xl border border-gray-100 hover:border-[#3B7EFF]/40 hover:shadow-lg transition-all duration-300">
                             <div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center mr-5 transition-all duration-300 group-hover:scale-110"
                                 style="background: linear-gradient(135deg, #00A3E0 0%, #081E57 100%);">
                                 <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -83,7 +83,7 @@
                         </a>
 
                         <!-- MAX -->
-                        <a href="#" class="group flex items-center p-5 bg-white rounded-2xl border border-gray-100 hover:border-[#3B7EFF]/40 hover:shadow-lg transition-all duration-300">
+                        <a href="https://max.ru/u/f9LHodD0cOJPfiUx8KijSIk_BNIxBnjI8zgfdeH1l6bUKgwOUKXgVnWpyxw" target="_blank" rel="noopener noreferrer" class="group flex items-center p-5 bg-white rounded-2xl border border-gray-100 hover:border-[#3B7EFF]/40 hover:shadow-lg transition-all duration-300">
                             <div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center mr-5 transition-all duration-300 group-hover:scale-110"
                                 style="background: linear-gradient(135deg, #7A2AFA 0%, #1A0A62 100%);">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
