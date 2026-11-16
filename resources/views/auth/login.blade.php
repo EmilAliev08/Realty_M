@@ -21,7 +21,7 @@
             <input id="email" type="email" name="email" 
                    value="{{ old('email') }}" 
                    required autofocus autocomplete="username"
-                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#3B7EFF] focus:ring-2 focus:ring-[#3B7EFF]/20 outline-none transition-all bg-white @error('email') border-red-500 @enderror"
+                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#3B7EFF] focus:ring-2 focus:ring-[#3B7EFF]/20 outline-none transition-all bg-white {{ $errors->has('email') ? 'border-red-500' : '' }}"
                    placeholder="example@mail.ru">
             @error('email')
                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
