@@ -105,13 +105,13 @@
         
     
         <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-100 pt-4 space-y-3">
-            <a href="#hero" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Главная</a>
-            <a href="#advantages" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Преимущества</a>
-            <a href="#services" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Услуги</a>
-            <a href="#about" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Обо мне</a>
-            <a href="#process" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Как проходит работа</a>
-            <a href="#contacts" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Контакты</a>
-            <a href="#reviews" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Отзывы</a>
+            <a href="/#hero" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Главная</a>
+            <a href="/#advantages" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Преимущества</a>
+            <a href="/#services" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Услуги</a>
+            <a href="/#about" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Обо мне</a>
+            <a href="/#process" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Как проходит работа</a>
+            <a href="/#contacts" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Контакты</a>
+            <a href="/#reviews" class="block py-2 text-gray-700 hover:text-[#3B7EFF] font-medium transition-colors">Отзывы</a>
             
             <!-- Кнопки для мобильной версии -->
             <div class="pt-3 flex flex-col space-y-3">
