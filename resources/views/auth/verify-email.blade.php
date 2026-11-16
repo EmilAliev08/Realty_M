@@ -1,11 +1,11 @@
- 
+
 <x-guest-layout>
     <h2 class="text-2xl font-bold text-center text-gray-900 mb-2">
         Подтверждение email
     </h2>
 
     <p class="text-center text-sm text-gray-600 mb-6">
-        Спасибо за регистрацию! Проверьте почту и перейдите по ссылке для подтверждения.
+        Мы отправили ссылку на вашу почту. Откройте письмо и перейдите по ссылке с любого устройства.
     </p>
 
     @if (session('status') === 'verification-link-sent')
@@ -22,26 +22,62 @@
         </div>
     @endif
 
+    <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg text-center">
+        <p class="text-sm text-blue-700">
+            Ожидаем подтверждения...
+        </p>
+        <p class="text-xs text-blue-600 mt-2">
+            Страница автоматически перенаправит вас после подтверждения email.
+        </p>
+    </div>
+
     <div class="flex flex-col items-center gap-4">
         <form method="POST" action="{{ route('verification.send') }}" class="w-full">
             @csrf
-
-            <button
-                type="submit"
-                class="w-full py-3 text-white font-bold rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-[1.01] shadow-lg"
-                style="background: linear-gradient(135deg, #3B7EFF 0%, #0D2E99 100%);">
+            <button type="submit"
+                class="w-full px-4 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
                 Отправить ссылку ещё раз
             </button>
         </form>
 
         <form method="POST" action="{{ route('logout') }}" class="w-full">
             @csrf
-
-            <button
-                type="submit"
-                class="w-full py-3 text-gray-700 font-semibold rounded-lg border border-gray-300 hover:bg-gray-50 transition-all">
+            <button type="submit"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50">
                 Выйти
             </button>
         </form>
     </div>
+
+    <script>
+        const verificationStatusUrl = @json(route('verification.status'));
+        const homeUrl = @json(route('home'));
+
+        async function checkEmailVerification() {
+            try {
+                const response = await fetch(verificationStatusUrl, {
+                    method: 'GET',
+                    credentials: 'same-origin',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    return;
+                }
+
+                const data = await response.json();
+
+                if (data.verified) {
+                    window.location.replace(homeUrl);
+                }
+            } catch (error) {
+                console.error('Не удалось проверить статус email:', error);
+            }
+        }
+
+        checkEmailVerification();
+        setInterval(checkEmailVerification, 3000);
+    </script>
 </x-guest-layout>
